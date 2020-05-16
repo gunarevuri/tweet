@@ -1,0 +1,18 @@
+{% extends 'Tweet/base.html' %}
+{% block content %}
+<style>
+.content {
+  height: 100vh;
+
+
+}
+</style>
+<div class="alert alert-info">you have been logged out 
+<div class="border-top pt-3">
+	<small class="text-muted">
+		<a class="ml-2" href="{% url 'login' %}">login</a>
+	</small></div>
+
+
+
+{% endblock %}

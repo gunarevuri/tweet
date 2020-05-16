@@ -1,0 +1,11 @@
+{% extends 'Tweet/base.html' %}
+{% block content %}
+<form method="POST" action='.'>
+	{% csrf_token %}
+	<p>do u really want to delete the post {{object.author}} with content :<a href="..">{{object.content}}</a></p>
+	<button class="btn btn-outline-info" type="submit">yes</button>
+
+</form>
+
+
+{% endblock %}

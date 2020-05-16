@@ -1,0 +1,31 @@
+{% extends 'Tweet/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div class="content-section">
+      <form method="POST" enctype="multipart/form-data" style="text-color:black" >
+          {% csrf_token %}
+          <fieldset class="form-group">
+
+              <legend class= "border-bottom mb-4" style="color:white;">signup</legend>
+                        <div>
+
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </div>
+                        <button class="btn btn-outline-info" type="submit">register</button>
+
+          </fieldset>
+      </form>
+      <p> already have an account <a href="{% url 'login' %}">login</a>
+          </p>
+      </div>
+
+
+
+
+
+
+{% endblock %}

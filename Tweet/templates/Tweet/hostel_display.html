@@ -1,0 +1,51 @@
+{% extends 'Tweet/base.html' %}
+{% block content %}
+
+
+
+<style>
+h1
+{
+	font-weight:bold;
+	color:white;
+	font-size:50px;
+	margin-left:3%;
+}
+h3
+{
+
+	color:white;
+	font-weight:bold;
+}
+p{
+	over-flow:none;
+}
+h2
+{
+	color:white;
+	font-weight:bold;
+}
+</style>
+<div>
+	<div style="padding-left:0px;padding-bottom:10vh; display:grid;">
+		<table border="4" >
+			<tr><td>
+
+	<p>ratings:{{ obj.ratings }}</p>
+			<p>update:<a href='/hostel/{{ obj.id }}/update'>ratingsupdate</a></p>
+
+
+</td></tr>
+</fieldset>
+</table>
+</div>
+</div>
+
+	
+</div>
+	 
+
+
+
+
+{% endblock %}

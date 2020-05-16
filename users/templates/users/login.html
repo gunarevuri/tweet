@@ -1,0 +1,33 @@
+{% extends 'Tweet/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+.content
+{
+  height:50vh;
+}
+
+
+</style>
+
+
+<div class="content-section" >
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-6" style="color:white;">LOGIN</legend>
+              {{ form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">login</button>
+              <a href="{% url 'password_reset' %}">forgot password </a>
+          </div>
+      </form>
+      <p style="color:white;"> need an account? <a href="{% url 'register' %}">register</a>
+          </p>
+      </div>
+
+
+
+
+{% endblock %}

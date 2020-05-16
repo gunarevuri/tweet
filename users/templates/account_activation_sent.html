@@ -1,0 +1,14 @@
+{% extends 'Tweet/base.html' %}
+<style>
+.content {
+  height: 100vh;
+}
+</style>
+{% block content %}
+<div class="alert alert-info">
+account activation link sent to your registered mail:{{ user.email }}
+</div>
+
+
+
+{% endblock %}

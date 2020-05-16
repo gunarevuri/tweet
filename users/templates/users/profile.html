@@ -1,0 +1,38 @@
+{% extends "Tweet/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class='content-section'>
+      <form method="POST" enctype="multipart/form-data" style="text-color:black" >
+          {% csrf_token %}
+          <fieldset class="form-group">
+
+              <legend class="border-bottom mb-4"style="color:white;">profile info</legend>
+                        <div>
+                          <h3 class="account-heading">username:{{ user.username }}</h3>
+          <p class="text-secondary">email:{{ user.email }}</p>
+              
+
+              {{ e_form|crispy }}
+              {{ p_form|crispy }}
+            </div>
+              <div style="display:grid;grid-template-columns:auto auto auto">
+               {{ u_form|crispy }}
+             </div>
+            <p> check the events u are intrested in</p>
+          </fieldset>
+
+              <button class="btn btn-outline-info" type="submit">update</button>
+      </form>
+      </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

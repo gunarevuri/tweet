@@ -1,0 +1,35 @@
+{% extends 'Tweet/base.html' %}
+
+{% block content %}
+<div>
+  <legend><h2 style="font-weight:bold;"><a href="{% url 'tweet' %}">Tweet</a></h2></legend>
+  <div style="padding-left:0px;padding-bottom:10vh; display:grid;">
+    <table border="4">
+      <tr><td>
+
+  <h4><a href="{%url 'profile' %}">{{ object.author }}</a></h4>
+      <p>title:{{object.title}}</p>
+
+  <p>content:{{ object.content }}</p>
+  <h5 style="color:red;">posted on{{object.timestamp}}</h5>
+</td></tr>
+</fieldset>
+
+
+</table>
+<div style="display:flex;margin-top:10px;" >
+              <a href="/tweet/{{object.id}}/update/" style="flex:1;"><button class="btn btn-outline-info">update</button></a>
+              <a href="/tweet/{{object.id}}/delete/" style="color:red;flex:1;"><button class="btn btn-outline-info">delete</button></a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+{% endblock %}
